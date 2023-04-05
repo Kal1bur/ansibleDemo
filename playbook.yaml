@@ -1,0 +1,11 @@
+---
+
+- name: My First Playbook
+  hosts: all
+  gather_facts: true
+  vars_files:
+    - "vars.yaml"
+    
+  tasks:
+    - debug:
+        msg: " {{ ansible_env }}"
